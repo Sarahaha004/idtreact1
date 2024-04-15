@@ -3,13 +3,14 @@
 * {
   box-sizing: border-box;
 }
-body {
-  /* background: #1c8ef9 !important; */
-  /* min-height: 100vh;
-  display: flex; */
-  font-weight: 400;
-  font-family: "Fira Sans", sans-serif;
-}
+
+  body {
+    background-color: #242c9e;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    
+  }
 
 h1,
 h2,

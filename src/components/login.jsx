@@ -5,6 +5,9 @@ import {ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 
+
+
+
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -24,9 +27,10 @@ function Login() {
 
 
   return (
-    <div className="login">
+    
+    <div className="login-container">
     <ToastContainer/>
-    <div className="form">
+    <div className="form-container">
     <div>
     <form onSubmit={handleSubmit}>
       <h3>Login</h3>

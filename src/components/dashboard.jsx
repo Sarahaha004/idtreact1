@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Chart from 'chart.js/auto';
 
+
 const FileUpload = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [fileName, setFileName] = useState('');
@@ -27,7 +28,7 @@ const FileUpload = () => {
       const formData = new FormData();
       formData.append('file', selectedFile);
 
-      fetch('http://192.168.0.104:5000/predict', {
+      fetch('http://localhost:5000/predict', {
         method: 'POST',
         body: formData,
       })
