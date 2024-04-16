@@ -3,9 +3,7 @@ import React, { useState } from "react";
 import { auth } from "./firebase";
 import {ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-
-
-
+import './Login.css';
 
 
 function Login() {
@@ -28,9 +26,9 @@ function Login() {
 
   return (
     
-    <div className="login-container">
+    <div className='d-flex justify-content-center align-items-center vh-100 loginPage'>
     <ToastContainer/>
-    <div className="form-container">
+    <div className='p-3 rounded w-25 border loginForm'>
     <div>
     <form onSubmit={handleSubmit}>
       <h3>Login</h3>

@@ -1,10 +1,9 @@
-
 import React, { useEffect, useState } from "react";
 import { auth, db } from "./firebase";
 import { doc, getDoc } from "firebase/firestore";
 import { Link } from "react-router-dom";
 import * as XLSX from 'xlsx';
-import './profile.css'; // Import the CSS file
+import './profile.css'; 
 
 function Profile() {
   const [userDetails, setUserDetails] = useState(null);
@@ -50,15 +49,16 @@ function Profile() {
   };
 
   return (
-    <div className="profile-container">
+    <div className='profilepage'>
+    <div className='  profileForm'>
       {userDetails ? (
         <>
           <div className="profile-header">
-            <h3>Welcome {userDetails.firstName}!</h3>
+            <h1>Welcome {userDetails.firstName}!</h1>
            
           </div>
           <div className="profile-content">
-            <p>Email: {userDetails.email}</p>
+            <h3>Email: {userDetails.email}</h3>
           </div>
           <div className="profile-buttons">
           <button className="btn btn-primary" style={{ padding: "10px 20px" }}>
@@ -71,6 +71,9 @@ function Profile() {
               </button>
             </div>
           <input type="file" accept=".xlsx, .xls" onChange={handleFileUpload} />
+          <p>
+          
+          </p>
           {excelData && (
             <table className="profile-table">
               <thead>
@@ -95,6 +98,7 @@ function Profile() {
       ) : (
         <p>Loading...</p>
       )}
+    </div>
     </div>
   );
 }

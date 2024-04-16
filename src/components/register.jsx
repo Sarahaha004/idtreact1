@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { auth,db } from "./firebase";
 import { setDoc,doc } from "firebase/firestore";
 import { ToastContainer, toast } from "react-toastify";
-
+import './Login.css';
 
 
 function Register() {
@@ -38,8 +38,9 @@ function Register() {
   };
 
   return (
-    <div>
+    <div className='d-flex justify-content-center align-items-center vh-100 registerPage'>
       <ToastContainer/>
+      <div className='p-3 rounded w-25 border loginForm'>
     <form onSubmit={handleRegister}>
       <h3>Sign Up</h3>
 
@@ -95,6 +96,7 @@ function Register() {
         Already registered <a href="/login">Login</a>
       </p>
     </form>
+    </div>
     </div>
   );
 }

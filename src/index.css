@@ -1,35 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
-
-* {
-  box-sizing: border-box;
-}
-
-  body {
-    background-color: #242c9e;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    
-  }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-label,
-span {
-  font-weight: 500;
-  font-family: "Fira Sans", sans-serif;
-}
-
-body,
-html,
-.App,
-#root,
+/*
 .auth-wrapper,
-.container-fullpage { /* Include full-page container in the height and width properties */
+.container-fullpage { 
   width: 100%;
   height: 100%;
 }
@@ -87,17 +58,17 @@ html,
 
 /* Add these styles to your CSS file or component */
 
-.upload-container {
-  max-width: 600px; /* Set the maximum width for the container */
-  margin: 0 auto; /* Center the container horizontally */
+/* .upload-container {
+  max-width: 600px; 
+  margin: 0 auto;
 }
 
 .file-upload {
-  margin-bottom: 20px; /* Add some space below the file upload area */
-}
+  margin-bottom: 20px; 
 
 .file-upload input[type="file"],
 .file-upload button {
-  padding: 10px; /* Increase padding around the file input and button */
-  font-size: 16px; /* Increase font size for better readability */
+  padding: 10px; 
+  font-size: 16px; 
 }
+} */

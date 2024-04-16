@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Chart from 'chart.js/auto';
+import './dashboard.css';
 
 
 const FileUpload = () => {
@@ -64,7 +65,7 @@ const FileUpload = () => {
             '#9DAAF2',
             '#FF6A3D',
             '#F4DB7D',
-            '#6E4E15' // Dark gold
+            '#6E4E15' 
           ]
         }]
       },
@@ -93,7 +94,7 @@ const FileUpload = () => {
             '#9DAAF2',
             '#FF6A3D',
             '#F4DB7D',
-            '#6E4E15' // Dark gold
+            '#6E4E15'
           ]
         }]
       },
@@ -104,7 +105,8 @@ const FileUpload = () => {
   };
 
   return (
-    <div className="container-fullpage">
+    <div className='d-flex justify-content-center align-items-center vh-100 profilepage'>
+    <div>
       <h1 className="text-center mb-5">Sales Commission Prediction</h1>
       <form id="uploadForm" encType="multipart/form-data">
         <div className="mb-3">
@@ -163,7 +165,7 @@ const FileUpload = () => {
             </div>
           </div>
         </div>
-    
+    </div>
     </div>
   );
 };
