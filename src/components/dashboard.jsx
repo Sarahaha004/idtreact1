@@ -105,7 +105,7 @@ const FileUpload = () => {
   };
 
   return (
-    <div className='d-flex justify-content-center align-items-center vh-100 profilepage'>
+    <div className='justify-content-center align-items-center vh-100 profilepage'>
     <div>
       <h1 className="text-center mb-5">Sales Commission Prediction</h1>
       <form id="uploadForm" encType="multipart/form-data">
