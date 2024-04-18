@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Chart from 'chart.js/auto';
-import './dashboard.css';
-
+import Navbar from './Navbar';
 
 const FileUpload = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -105,68 +104,72 @@ const FileUpload = () => {
   };
 
   return (
-    <div className='justify-content-center align-items-center vh-100 profilepage'>
-    <div>
-      <h1 className="text-center mb-5">Sales Commission Prediction</h1>
-      <form id="uploadForm" encType="multipart/form-data">
-        <div className="mb-3">
-          <label htmlFor="salesData" className="form-label">
-            Upload Sales Data CSV File:
-          </label>
-          <input
-            type="file"
-            id="salesData"
-            name="salesData"
-            accept=".csv"
-            required
-            className="form-control"
-            onChange={handleFileChange}
-          />
-        </div>
-        <button type="button" className="btn btn-primary" onClick={handleUpload}>
-          Predict
-        </button>
-      </form>
-      {fileName && <p className="mt-3">Selected File: {fileName}</p>}
-      {error && <div className="alert alert-danger mt-3">{error}</div>}
-      {predictionData && (
-          <div className="mt-4">
-            <h2 className="text-center mb-4">Prediction Table</h2>
-            <table className="table table-bordered">
-              <thead>
-                <tr>
-                  <th>Product</th>
-                  <th>Sales Amount</th>
-                  <th>Product Demand Level</th>
-                  <th>Predicted Sales Commission</th>
-                </tr>
-              </thead>
-              <tbody>
-                {predictionData.map((row, index) => (
-                  <tr key={index}>
-                    <td>{row.product_name}</td>
-                    <td>{row.sales_amount}</td>
-                    <td>{row.product_demand_level}</td>
-                    <td>{row.predicted_sales_commission.toFixed(2)}</td>
+    <div style={{ display: "flex" }}>
+      <Navbar style={{ width: "200px", marginRight: "20px" }} />
+      <div className="justify-content-center align-items-center vh-100 profilepage container-fluid" style={{ display: "flex", flexDirection: "column", flex: "1" }}>
+        <div style={{ padding: "20px" }}>
+          <h1 className="text-center mb-5">Sales Commission Prediction</h1>
+          <form id="uploadForm" encType="multipart/form-data">
+            <div className="mb-3">
+              <label htmlFor="salesData" className="form-label">
+                Upload Sales Data CSV File:
+              </label>
+              <input
+                type="file"
+                id="salesData"
+                name="salesData"
+                accept=".csv"
+                required
+                className="form-control"
+                onChange={handleFileChange} />
+            </div>
+            <button type="button" className="btn btn-primary" onClick={handleUpload}>
+              Predict
+            </button>
+          </form>
+          {fileName && <p className="mt-3">Selected File: {fileName}</p>}
+          {error && <div className="alert alert-danger mt-3">{error}</div>}
+          {predictionData && (
+            <div className="mt-4">
+              <h2 className="text-center mb-4">Prediction Table</h2>
+              <table className="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th>Sales Amount</th>
+                    <th>Product Demand Level</th>
+                    <th>Predicted Sales Commission</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
-        <div className="mt-4">
-          <h2 className="text-center mb-4">Predictions</h2>
-          <div className="row">
-            <div className="col-md-6">
-              <canvas id="barChart"></canvas>
+                </thead>
+                <tbody>
+                  {predictionData.map((row, index) => (
+                    <tr key={index}>
+                      <td>{row.product_name}</td>
+                      <td>{row.sales_amount}</td>
+                      <td>{row.product_demand_level}</td>
+                      <td>{row.predicted_sales_commission.toFixed(2)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
-            <div className="col-md-6">
-              <canvas id="pieChart"></canvas>
+          )}
+          {predictionData && (
+            <div className="mt-4">
+              <h2 className="text-center mb-4">Analytics</h2>
+              <div className="row">
+                <div className="col-md-6">
+                  <canvas id="barChart"></canvas>
+                </div>
+                <div className="col-md-6">
+                  <canvas id="pieChart"></canvas>
+                </div>
+              </div>
             </div>
-          </div>
+          )}
+    </div>
         </div>
-    </div>
-    </div>
+      </div>
   );
 };
 
