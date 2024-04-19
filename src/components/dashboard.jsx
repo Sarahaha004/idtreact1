@@ -107,11 +107,11 @@ const FileUpload = () => {
     <div style={{ display: "flex" }}>
       <Navbar style={{ width: "200px", marginRight: "20px" }} />
       <div className="justify-content-center align-items-center vh-100 profilepage container-fluid" style={{ display: "flex", flexDirection: "column", flex: "1" }}>
-        <div style={{ padding: "20px" }}>
+        <div >
           <h1 className="text-center mb-5">Sales Commission Prediction</h1>
-          <form id="uploadForm" encType="multipart/form-data">
+          <form id="uploadForm" encType="multipart/form-data" style={{ fontSize: "35px" }}>
             <div className="mb-3">
-              <label htmlFor="salesData" className="form-label">
+              <label htmlFor="salesData" className="form-label" >
                 Upload Sales Data CSV File:
               </label>
               <input
@@ -131,8 +131,8 @@ const FileUpload = () => {
           {error && <div className="alert alert-danger mt-3">{error}</div>}
           {predictionData && (
             <div className="mt-4">
-              <h2 className="text-center mb-4">Prediction Table</h2>
-              <table className="table table-bordered">
+              <h2 className="text-center mb-4" style={{ fontSize: "50px" }}>Prediction Table</h2>
+              <table className="table table-bordered" style={{ fontSize: "24px" }} >
                 <thead>
                   <tr>
                     <th>Product</th>

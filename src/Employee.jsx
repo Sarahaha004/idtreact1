@@ -24,15 +24,17 @@ const Employee = () => {
   return (
     <div>
       <Navbar />
+      <div className="container mt-5">
+        <div className="row justify-content-center">
       <div className="col-12">
           <div className="employee-content text-center">
           <h1 className="text-center mb-5">Employee Details</h1>
           <div className="mb-5">
-      <input type="file" accept=".xlsx, .xls" onChange={handleFileUpload} />
+      <input type="file" accept=".xlsx, .xls" onChange={handleFileUpload} className="form-control form-control-lg"/>
       </div>
       {excelData && (
-        <table className="table">
-          <thead>
+        <table className="table table-striped">
+          <thead className="table-dark">
             <tr>
               {excelData[0].map((header, index) => (
                 <th key={index}>{header}</th>
@@ -52,6 +54,8 @@ const Employee = () => {
        
       )}
        </div>
+        </div>
+        </div>
         </div>
     </div>
   );

@@ -40,12 +40,12 @@ function Profile() {
             </li>
           </ul>
         </nav> */}
-        <div className="col-10">
+         <div className="col-10 offset-2">
           <div className="profile-content text-center">
-            <h1>Welcome {userDetails?.CompanyName}!</h1>
+          <h1 className="mt-4">Welcome {userDetails?.CompanyName}!</h1>
+          
             <h3>Email: {userDetails?.email}</h3>
-            <h3>Company Address: {userDetails?.Address}</h3>
-            
+            <h3>Company Address: {userDetails?.Address}</h3> 
           </div>
         </div>
       </div>

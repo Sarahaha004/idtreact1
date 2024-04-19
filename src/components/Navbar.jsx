@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { auth } from "./firebase";
+import '../App.css';
 
 function Navbar() {
   const location = useLocation();
@@ -21,36 +22,36 @@ function Navbar() {
 
   return (
     <nav
-      className="col-2 bg-dark d-flex flex-column align-items-center justify-content-between"
+      className="col-2 custom-navbar-color d-flex flex-column align-items-center justify-content-between"
       style={{ height: "100vh", position: "fixed", top: 0, left: 0 }}
     >
       <div>
         <img
-          src="https://media.istockphoto.com/id/1053291038/vector/business-finance-bar-profit-vector-illustration.jpg?s=612x612&w=0&k=20&c=r0axxeuEroKcQO7lhVziB0-AFuRTFfGUfnrfF1euzB4="
+          src="/images/saleslogo.png"
           alt="Logo"
           className="img-fluid mb-3"
-          style={{ width: "100%", maxHeight: "150px", objectFit: "cover" }}
+          style={{ width: "100%", maxHeight: "270px", objectFit: "cover" }}
         />
-        <ul className="nav flex-column">
+        <ul className="nav flex-column text-center">
           <li className="nav-item">
-            <Link to="/dashboard" className="nav-link text-light">
-              Dashboard
+            <Link to="/dashboard" className="nav-link text-light"  style={{ fontSize: "30px", fontWeight: "bold" }}>
+              Prediction
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/employee" className="nav-link text-light">
+            <Link to="/employee" className="nav-link text-light"  style={{ fontSize: "30px", fontWeight: "bold" }}>
               Employee
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/profile" className="nav-link text-light">
+            <Link to="/profile" className="nav-link text-light"  style={{ fontSize: "30px", fontWeight: "bold" }}>
               Profile
             </Link>
           </li>
         </ul>
       </div>
       <div>
-        <button className="btn btn-link text-light" onClick={handleLogout}>
+        <button className="btn  text-light" onClick={handleLogout}  style={{ fontSize: "30px", fontWeight: "bold",paddingBottom: "50px" }}>
           Logout
         </button>
       </div>
