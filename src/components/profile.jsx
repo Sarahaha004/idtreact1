@@ -41,9 +41,10 @@ function Profile() {
           </ul>
         </nav> */}
         <div className="col-10">
-          <div className="profile-content">
-            <h1>Welcome {userDetails?.firstName}!</h1>
+          <div className="profile-content text-center">
+            <h1>Welcome {userDetails?.CompanyName}!</h1>
             <h3>Email: {userDetails?.email}</h3>
+            <h3>Company Address: {userDetails?.Address}</h3>
             
           </div>
         </div>

@@ -2,11 +2,11 @@ import React from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Login from "./components/Login";
-import SignUp from "./components/Register";
-import Profile from "./components/Profile";
-import FileUpload from "./components/Dashboard";
-import Employee from "./employee";
+import Login from "./components/login";
+import SignUp from "./components/register";
+import Profile from "./components/profile";
+import FileUpload from "./components/dashboard";
+import Employee from "./Employee";
 import { ToastContainer } from "react-toastify";
 
 function App() {

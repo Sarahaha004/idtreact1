@@ -21,8 +21,8 @@ function Register() {
       if(user){
         await setDoc(doc(db,"Users",user.uid),{
           email:user.email,
-          firstName:fname,
-          lastName:lname,
+          CompanyName:fname,
+          Address:lname,
         });
       }
       console.log("User Registered Successfully");
@@ -40,32 +40,32 @@ function Register() {
   return (
     <div className='d-flex justify-content-center align-items-center vh-100 registerPage'>
       <ToastContainer/>
-      <div className='p-3 rounded w-25 border loginForm'>
+      <div className='p-3 rounded w-25 h-50 border loginForm'>
     <form onSubmit={handleRegister}>
-      <h3>Sign Up</h3>
-
-      <div className="mb-3">
-        <label>First name</label>
+      <h1>Sign Up</h1>
+      <div className="mb-4"></div>
+      <div className="mb-4">
+        <label>Company Name</label>
         <input
           type="text"
           className="form-control"
-          placeholder="First name"
+          placeholder="Company Name"
           onChange={(e) => setFname(e.target.value)}
           required
         />
       </div>
 
-      <div className="mb-3">
-        <label>Last name</label>
+      <div className="mb-4">
+        <label>Company Address</label>
         <input
           type="text"
           className="form-control"
-          placeholder="Last name"
+          placeholder="Enter Address"
           onChange={(e) => setLname(e.target.value)}
         />
       </div>
 
-      <div className="mb-3">
+      <div className="mb-4">
         <label>Email address</label>
         <input
           type="email"
@@ -76,7 +76,7 @@ function Register() {
         />
       </div>
 
-      <div className="mb-3">
+      <div className="mb-4">
         <label>Password</label>
         <input
           type="password"
