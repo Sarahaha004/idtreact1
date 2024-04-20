@@ -29,21 +29,11 @@ function Profile() {
     <div className='container-fluid'>
       <div className="row">
         <Navbar/>
-        {/* <nav className="col-2 bg-dark vh-100 d-flex flex-column align-items-center justify-content-center">
-          <img src="https://media.istockphoto.com/id/1053291038/vector/business-finance-bar-profit-vector-illustration.jpg?s=612x612&w=0&k=20&c=r0axxeuEroKcQO7lhVziB0-AFuRTFfGUfnrfF1euzB4=" alt="Logo" className="img-fluid mb-3" style={{ maxHeight: "80px" }} />
-          <ul className="nav flex-column">
-            <li className="nav-item">
-              <Link to="/dashboard" className="nav-link text-light">Dashboard</Link>
-            </li>
-            <li className="nav-item">
-              <button className="btn btn-link text-light" onClick={handleLogout}>Logout</button>
-            </li>
-          </ul>
-        </nav> */}
+   
          <div className="col-10 offset-2">
           <div className="profile-content text-center">
           <h1 className="mt-4">Welcome {userDetails?.CompanyName}!</h1>
-          
+          {userDetails?.EmpData}
             <h3>Email: {userDetails?.email}</h3>
             <h3>Company Address: {userDetails?.Address}</h3> 
           </div>
