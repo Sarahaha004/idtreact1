@@ -25,13 +25,16 @@ function Navbar() {
       className="col-2 custom-navbar-color d-flex flex-column align-items-center justify-content-between"
       style={{ height: "100vh", position: "fixed", top: 0, left: 0 }}
     >
-      <div>
+      <div className="text-center">
+         {/* <h1 className="text-light mb-3" style={{ fontSize: "30px", fontWeight: "italic" }}>Sales Sense</h1> */}
         <img
           src="/images/saleslogo.png"
           alt="Logo"
           className="img-fluid mb-3"
           style={{ width: "100%", maxHeight: "270px", objectFit: "cover" }}
         />
+        <br />
+        <br />
         <ul className="nav flex-column text-center">
           <li className="nav-item">
             <Link to="/profile" className="nav-link text-light"  style={{ fontSize: "30px", fontWeight: "bold" }}>
