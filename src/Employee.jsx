@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import { auth } from "./components/firebase"; // Import the auth object from the Firebase authentication module
 import { db } from "./components/firebase";
 import { doc, getDoc, setDoc } from "firebase/firestore";
-
+import Emptable from './components/Emptable';
 const Employee = () => {
   const [excelData, setExcelData] = useState(null);
   const [uploadedFile, setUploadedFile] = useState(null);
@@ -63,13 +63,13 @@ const Employee = () => {
   };
 
   return (
-    <div>
+    <div style={{ marginLeft: '255px' }}>
       <Navbar />
       <div className="container mt-5">
         <div className="row justify-content-center">
           <div className="col-12">
             <div className="employee-content text-center">
-              <h1 className="text-center mb-5">Employee Details</h1>
+              <h2 className="text-center mb-4" style={{ fontSize: "50px" }}>Employee Details</h2>
               {excelData && (
                 <table className="table table-striped">
                   <thead className="table-dark">
@@ -90,16 +90,18 @@ const Employee = () => {
                   </tbody>
                 </table>
               )}
-              <div className="mb-5">
+              <div className="mb-3 d-flex justify-content-between align-items-center">
                 <input type="file" accept=".xlsx, .xls" onChange={handleFileUpload} className="form-control form-control-lg" />
-                <button className="btn btn-primary mt-2" onClick={handleUpload}>Upload New File</button>
+                <button className="btn btn-primary btn-lg" onClick={handleUpload}>Upload</button>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <br />
+      <Emptable/>
     </div>
   );
-};
+} 
 
 export default Employee;

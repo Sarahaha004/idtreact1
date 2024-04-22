@@ -34,6 +34,11 @@ function Navbar() {
         />
         <ul className="nav flex-column text-center">
           <li className="nav-item">
+            <Link to="/profile" className="nav-link text-light"  style={{ fontSize: "30px", fontWeight: "bold" }}>
+              Profile
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link to="/dashboard" className="nav-link text-light"  style={{ fontSize: "30px", fontWeight: "bold" }}>
               Prediction
             </Link>
@@ -41,11 +46,6 @@ function Navbar() {
           <li className="nav-item">
             <Link to="/employee" className="nav-link text-light"  style={{ fontSize: "30px", fontWeight: "bold" }}>
               Employee
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/profile" className="nav-link text-light"  style={{ fontSize: "30px", fontWeight: "bold" }}>
-              Profile
             </Link>
           </li>
         </ul>

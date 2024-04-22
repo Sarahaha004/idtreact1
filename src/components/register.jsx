@@ -22,7 +22,7 @@ function Register() {
           email: user.email,
           CompanyName: fname,
           Address: lname,
-          EmpData: file,
+          // EmpData: file,
         });
       }
       console.log("User Registered Successfully");
